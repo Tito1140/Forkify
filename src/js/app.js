@@ -1,4 +1,5 @@
 import Search from './models/Search';
+import Recipe from './models/Recipe';
 import * as searchView from './views/searchView';
 import { elements, renderLoader, clearLoader } from './views/base';
 // Global State of the App
@@ -40,5 +41,8 @@ elements.searchResPages.addEventListener('click', e => {
     }
 });
 
-//search.getResults();
+// Recipe Controller
 
+const r = new Recipe(46956);
+r.getRecipe();
+console.log(r);
